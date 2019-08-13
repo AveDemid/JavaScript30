@@ -1,3 +1,44 @@
 body {
-  background: blue;
+  background-color: #000;
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.key {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid #fff;
+  padding: 16px;
+  margin: 16px;
+  width: 120px;
+  height: 120px;
+  justify-content: center;
+  transition-duration: 0.1s;
+  transition-property: box-shadow, transform;
+  transition-timing-function: ease;
+  box-shadow: 0 0 0 orange;
+}
+
+.key.playing {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px 5px orange;
+}
+
+.key-char {
+  font-size: 32px;
+}
+
+.effect-name {
+  font-size: 20px;
 }
