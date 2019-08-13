@@ -12,22 +12,21 @@ import snare from "./sound/snare.wav";
 import tink from "./sound/tink.wav";
 import tom from "./sound/tom.wav";
 
-(() => {
-  const audios = [boom, clap, hihat, kick, openhat, ride, snare, tink, tom];
-  const keyCodes = ["65", "83", "68", "70", "71", "72", "74", "75", "76"];
-  const keys = document.querySelectorAll(".key");
+const audios = [boom, clap, hihat, kick, openhat, ride, snare, tink, tom];
+const keyCodes = ["65", "83", "68", "70", "71", "72", "74", "75", "76"];
 
-  // Add audio
-  audios.map((audioSrc, index) => {
-    const audio = document.createElement("audio");
+// Add audio
+audios.map((audioSrc, index) => {
+  const audio = document.createElement("audio");
 
-    audio.src = audioSrc;
-    audio.setAttribute("data-key", keyCodes[index]);
+  audio.src = audioSrc;
+  audio.setAttribute("data-key", keyCodes[index]);
+  audio.preload = "auto";
 
-    document.body.appendChild(audio);
-  });
+  document.body.appendChild(audio);
+});
 
-  // Listen keydown
+const handleKeyDown = () => {
   window.addEventListener("keydown", event => {
     // Effect for .key if exist
     const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
@@ -42,11 +41,26 @@ import tom from "./sound/tom.wav";
       audio.play();
     }
   });
+};
 
-  // Remove class after transition end
-  keys.forEach(key => {
+const handleTransitionEnd = () => {
+  document.querySelectorAll(".key").forEach(key => {
     key.addEventListener("transitionend", () => {
       key.classList.remove("playing");
     });
   });
-})();
+};
+
+const hidePreloader = () => {
+  const preloader = document.querySelector(".preloader");
+
+  preloader.style.display = "none";
+
+  console.log(preloader);
+};
+
+window.onload = () => {
+  handleKeyDown();
+  handleTransitionEnd();
+  hidePreloader();
+};
