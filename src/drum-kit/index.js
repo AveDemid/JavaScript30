@@ -52,11 +52,7 @@ const handleTransitionEnd = () => {
 };
 
 const hidePreloader = () => {
-  const preloader = document.querySelector(".preloader");
-
-  preloader.style.display = "none";
-
-  console.log(preloader);
+  document.querySelector(".preloader").style.display = "none";
 };
 
 window.onload = () => {
