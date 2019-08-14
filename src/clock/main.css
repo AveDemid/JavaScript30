@@ -1,3 +1,66 @@
 body {
-  background: red;
+  background: black;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.center-clock {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.clock-face {
+  width: 100%;
+  max-width: 320px;
+  border: 12px solid #ffffff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.clock-placeholder {
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+.arrow {
+  position: absolute;
+  width: 50%;
+  border: 5px solid #fff;
+  background-color: #ffffff;
+  top: calc(50% + -5px);
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
+
+.arrow-hours {
+  width: 40%;
+  left: 10%;
+}
+
+.arrow-minutes {
+  width: 45%;
+  left: 5%;
+  border-width: 3px;
+  top: calc(50% + -3px);
+}
+
+.arrow-second {
+  width: 48%;
+  left: 2%;
+  border-width: 1px;
+  top: calc(50% + -1px);
+  border-color: red;
 }
