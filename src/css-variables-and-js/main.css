@@ -1,3 +1,49 @@
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
 body {
   background: green;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 2.4rem;
+}
+
+.h2 {
+  color: #ffffff;
+  margin-bottom: 2.4rem;
+}
+
+.js {
+  color: var(--base);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+label {
+  font-size: 32px;
+  color: #fff;
+  display: flex;
+  margin: 0 24px;
+  align-items: center;
+}
+
+label input {
+  margin-left: 16px;
+}
+
+img {
+  padding: var(--spacing);
+  background-color: var(--base);
+  filter: blur(var(--blur));
 }
