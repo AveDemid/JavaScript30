@@ -5,7 +5,8 @@ module.exports = {
     common: "./src/common/index.js",
     drumKit: "./src/drum-kit/index.js",
     clock: "./src/clock/index.js",
-    cssVariablesAndJs: "./src/css-variables-and-js/index.js"
+    cssVariablesAndJs: "./src/css-variables-and-js/index.js",
+    arrayCardio1: "./src/array-cardio-1/index.js"
   },
   module: {
     rules: [
@@ -51,6 +52,12 @@ module.exports = {
       filename: "css-variables-and-js.html",
       title: "Playing with CSS Variables and JS",
       chunks: ["cssVariablesAndJs", "common"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/array-cardio-1/index.html",
+      filename: "array-cardio-1.html",
+      title: "Array Cardio Day 1",
+      chunks: ["arrayCardio1", "common"]
     })
   ]
 };
