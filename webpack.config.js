@@ -6,7 +6,8 @@ module.exports = {
     drumKit: "./src/drum-kit/index.js",
     clock: "./src/clock/index.js",
     cssVariablesAndJs: "./src/css-variables-and-js/index.js",
-    arrayCardio1: "./src/array-cardio-1/index.js"
+    arrayCardio1: "./src/array-cardio-1/index.js",
+    flexPanelImageGallary: "./src/flex-panel-image-gallary/index.js"
   },
   module: {
     rules: [
@@ -58,6 +59,12 @@ module.exports = {
       filename: "array-cardio-1.html",
       title: "Array Cardio Day 1",
       chunks: ["arrayCardio1", "common"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/flex-panel-image-gallary/index.html",
+      filename: "flex-panel-image-gallary.html",
+      title: "Flex Panel Image Gallary",
+      chunks: ["flexPanelImageGallary", "common"]
     })
   ]
 };
