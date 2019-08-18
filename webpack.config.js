@@ -7,7 +7,8 @@ module.exports = {
     clock: "./src/clock/index.js",
     cssVariablesAndJs: "./src/css-variables-and-js/index.js",
     arrayCardio1: "./src/array-cardio-1/index.js",
-    flexPanelImageGallary: "./src/flex-panel-image-gallary/index.js"
+    flexPanelImageGallary: "./src/flex-panel-image-gallary/index.js",
+    ajaxTypeAhead: "./src/ajax-type-ahead/index.js"
   },
   module: {
     rules: [
@@ -65,6 +66,12 @@ module.exports = {
       filename: "flex-panel-image-gallary.html",
       title: "Flex Panel Image Gallary",
       chunks: ["flexPanelImageGallary", "common"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/ajax-type-ahead/index.html",
+      filename: "ajax-type-ahead.html",
+      title: "Ajax Type Ahead",
+      chunks: ["ajaxTypeAhead", "common"]
     })
   ]
 };
