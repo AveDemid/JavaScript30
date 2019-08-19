@@ -8,7 +8,8 @@ module.exports = {
     cssVariablesAndJs: "./src/css-variables-and-js/index.js",
     arrayCardio1: "./src/array-cardio-1/index.js",
     flexPanelImageGallary: "./src/flex-panel-image-gallary/index.js",
-    ajaxTypeAhead: "./src/ajax-type-ahead/index.js"
+    ajaxTypeAhead: "./src/ajax-type-ahead/index.js",
+    arrayCardio2: "./src/array-cardio-2/index.js"
   },
   module: {
     rules: [
@@ -72,6 +73,12 @@ module.exports = {
       filename: "ajax-type-ahead.html",
       title: "Ajax Type Ahead",
       chunks: ["ajaxTypeAhead", "common"]
-    })
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/array-cardio-2/index.html",
+      filename: "array-cardio-2.html",
+      title: "Array Cardio Day 2",
+      chunks: ["arrayCardio2", "common"]
+    }),
   ]
 };
