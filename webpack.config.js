@@ -10,7 +10,8 @@ module.exports = {
     flexPanelImageGallary: "./src/flex-panel-image-gallary/index.js",
     ajaxTypeAhead: "./src/ajax-type-ahead/index.js",
     arrayCardio2: "./src/array-cardio-2/index.js",
-    funWithHtml5Canvas: "./src/fun-with-html5-canvas"
+    funWithHtml5Canvas: "./src/fun-with-html5-canvas/index.js",
+    mustKnowDevToolsTricks: "./src/14-must-know-dev-tools-tricks/index.js"
   },
   module: {
     rules: [
@@ -86,6 +87,12 @@ module.exports = {
       filename: "fun-with-html5-canvas.html",
       title: "Fun with HTML5 Canvas",
       chunks: ["funWithHtml5Canvas", "common"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/14-must-know-dev-tools-tricks/index.html",
+      filename: "14-must-know-dev-tools-tricks.html",
+      title: "14 Must Know Dev Tools Tricks",
+      chunks: ["mustKnowDevToolsTricks", "common"]
     }),
   ]
 };
