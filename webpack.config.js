@@ -2,15 +2,17 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    common: "./src/common/index.js",
-    drumKit: "./src/drum-kit/index.js",
-    clock: "./src/clock/index.js",
-    cssVariablesAndJs: "./src/css-variables-and-js/index.js",
-    arrayCardio1: "./src/array-cardio-1/index.js",
-    flexPanelImageGallary: "./src/flex-panel-image-gallary/index.js",
-    ajaxTypeAhead: "./src/ajax-type-ahead/index.js",
-    arrayCardio2: "./src/array-cardio-2/index.js",
-    funWithHtml5Canvas: "./src/fun-with-html5-canvas"
+    common: "./src/common",
+    drumKit: "./src/drum-kit",
+    clock: "./src/clock",
+    cssVariablesAndJs: "./src/css-variables-and-js",
+    arrayCardio1: "./src/array-cardio-1",
+    flexPanelImageGallary: "./src/flex-panel-image-gallary",
+    ajaxTypeAhead: "./src/ajax-type-ahead",
+    arrayCardio2: "./src/array-cardio-2",
+    funWithHtml5Canvas: "./src/fun-with-html5-canvas",
+    mustKnowDevToolsTricks: "./src/14-must-know-dev-tools-tricks",
+    holdShiftToCheckMultipleCheckboxes: "./src/hold-shift-to-check-multiple-checkboxes"
   },
   module: {
     rules: [
@@ -86,6 +88,18 @@ module.exports = {
       filename: "fun-with-html5-canvas.html",
       title: "Fun with HTML5 Canvas",
       chunks: ["funWithHtml5Canvas", "common"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/14-must-know-dev-tools-tricks/index.html",
+      filename: "14-must-know-dev-tools-tricks.html",
+      title: "14 Must Know Dev Tools Tricks",
+      chunks: ["mustKnowDevToolsTricks", "common"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/hold-shift-to-check-multiple-checkboxes/index.html",
+      filename: "hold-shift-to-check-multiple-checkboxes.html",
+      title: "Hold Shift to Check Multiple Checkboxes",
+      chunks: ["holdShiftToCheckMultipleCheckboxes", "common"]
     }),
   ]
 };
