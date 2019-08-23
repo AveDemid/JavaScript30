@@ -12,7 +12,8 @@ module.exports = {
     arrayCardio2: "./src/array-cardio-2",
     funWithHtml5Canvas: "./src/fun-with-html5-canvas",
     mustKnowDevToolsTricks: "./src/14-must-know-dev-tools-tricks",
-    holdShiftToCheckMultipleCheckboxes: "./src/hold-shift-to-check-multiple-checkboxes"
+    holdShiftToCheckMultipleCheckboxes: "./src/hold-shift-to-check-multiple-checkboxes",
+    customHtml5VideoPlayer: "./src/custom-html5-video-player",
   },
   module: {
     rules: [
@@ -30,6 +31,14 @@ module.exports = {
         loader: "file-loader",
         options: {
           outputPath: "images"
+        }
+      },
+      {
+        test: /\.mp4$/,
+        loader: "file-loader",
+        options: {
+          outputPath: "video",
+          name: "[name].[ext]"
         }
       }
     ]
@@ -100,6 +109,12 @@ module.exports = {
       filename: "hold-shift-to-check-multiple-checkboxes.html",
       title: "Hold Shift to Check Multiple Checkboxes",
       chunks: ["holdShiftToCheckMultipleCheckboxes", "common"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/custom-html5-video-player/index.html",
+      filename: "custom-html5-video-player.html",
+      title: "Custom HTML5 Video Player",
+      chunks: ["customHtml5VideoPlayer", "common"]
     }),
   ]
 };
