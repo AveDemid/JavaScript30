@@ -14,6 +14,7 @@ module.exports = {
     mustKnowDevToolsTricks: "./src/14-must-know-dev-tools-tricks",
     holdShiftToCheckMultipleCheckboxes: "./src/hold-shift-to-check-multiple-checkboxes",
     customHtml5VideoPlayer: "./src/custom-html5-video-player",
+    keySequenceDetection: "./src/key-sequence-detection"
   },
   module: {
     rules: [
@@ -115,6 +116,12 @@ module.exports = {
       filename: "custom-html5-video-player.html",
       title: "Custom HTML5 Video Player",
       chunks: ["customHtml5VideoPlayer", "common"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/key-sequence-detection/index.html",
+      filename: "key-sequence-detection.html",
+      title: "Key Sequence Detection",
+      chunks: ["keySequenceDetection", "common"]
     }),
   ]
 };
