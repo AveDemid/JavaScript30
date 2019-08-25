@@ -14,7 +14,8 @@ module.exports = {
     mustKnowDevToolsTricks: "./src/14-must-know-dev-tools-tricks",
     holdShiftToCheckMultipleCheckboxes: "./src/hold-shift-to-check-multiple-checkboxes",
     customHtml5VideoPlayer: "./src/custom-html5-video-player",
-    keySequenceDetection: "./src/key-sequence-detection"
+    keySequenceDetection: "./src/key-sequence-detection",
+    slideInOnScroll: "./src/slide-in-on-scroll"
   },
   module: {
     rules: [
@@ -122,6 +123,12 @@ module.exports = {
       filename: "key-sequence-detection.html",
       title: "Key Sequence Detection",
       chunks: ["keySequenceDetection", "common"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/slide-in-on-scroll/index.html",
+      filename: "slide-in-on-scroll.html",
+      title: "Slide in On Scroll",
+      chunks: ["slideInOnScroll", "common"]
     }),
   ]
 };
