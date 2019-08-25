@@ -57,7 +57,7 @@ const ave = {
 }
 
 const dev = Object.assign({}, ave);
-dev1.social.twitter = "Deleted";
+dev.social.twitter = "Deleted";
 
 const dev2 = JSON.parse(JSON.stringify(ave));
 dev2.social.twitter = "Removed";
