@@ -15,7 +15,8 @@ module.exports = {
     holdShiftToCheckMultipleCheckboxes: "./src/hold-shift-to-check-multiple-checkboxes",
     customHtml5VideoPlayer: "./src/custom-html5-video-player",
     keySequenceDetection: "./src/key-sequence-detection",
-    slideInOnScroll: "./src/slide-in-on-scroll"
+    slideInOnScroll: "./src/slide-in-on-scroll",
+    objectAndArraysReferenceVsCopy: "./src/object-and-arrays-reference-vs-copy",
   },
   module: {
     rules: [
@@ -129,6 +130,12 @@ module.exports = {
       filename: "slide-in-on-scroll.html",
       title: "Slide in On Scroll",
       chunks: ["slideInOnScroll", "common"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/object-and-arrays-reference-vs-copy/index.html",
+      filename: "object-and-arrays-reference-vs-copy.html",
+      title: "Object and Arrays - Reference VS Copy",
+      chunks: ["objectAndArraysReferenceVsCopy", "common"]
     }),
   ]
 };
